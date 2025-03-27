@@ -242,17 +242,19 @@ h1 {
     align-items: center;
 }
 
-.benefits {
+/* .benefits {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    padding: 4rem 2rem;
+    
 }
 
 .benefits h2 {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 200;
     color: var(--text-color);
     position: relative;
-    display: inline-block;
+    
 }
 
 .benefits h2::after {
@@ -264,7 +266,30 @@ h1 {
     width: 100px;
     height: 2px;
     background-color: var(--primary-color);
+} */
+ .benefits {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: transparent;
+    position: relative;
 }
+
+.benefits-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.benefits h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #222;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+}
+
 
 
 /* after hero section */
@@ -1074,11 +1099,13 @@ h1 {
 /* Product section */
 .b-product-section {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
 }
-
+.b-product-info{
+   margin-left: 60px;
+}
 .b-product-image {
     text-align: center;
 }
@@ -1088,13 +1115,15 @@ h1 {
     height: auto;
 }
 
-.product-info h1 {
+.b-product-info h1 {
+    display: flex;
+    justify-self: start;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
-.product-info h2 {
+.b-product-info h2 {
     font-size: 1rem;
     color: #666;
     text-transform: uppercase;
@@ -1102,7 +1131,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
-.benefits {
+.bbenefits {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -1786,6 +1815,7 @@ p {
 }
 
 .footer-form button {
+    margin-left: -70px;
     padding: 0.75rem;
     background-color: #E4B442;
     color: black;
@@ -2153,7 +2183,7 @@ p {
     }
 
     .newsletter-form button {
-        width: 100%;
+        width: 40%;
     }
 
     .footer-links {
@@ -2169,11 +2199,11 @@ p {
 @media (max-width: 968px) {
     
 
-    .product-section {
+    .b-product-section {
         grid-template-columns: 1fr;
     }
 
-    .benefits {
+    .bbenefits {
         grid-template-columns: 1fr;
     }
 
